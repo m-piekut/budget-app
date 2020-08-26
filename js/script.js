@@ -119,7 +119,7 @@ function sumAll() {
     CategorySpendCost(allSpendClothes, allSpendClothesAll);
     CategorySpendCost(allSpendOthers, allSpendOthersAll);
 }
-sumAll()
+// sumAll()
 //usuwanie wydatku
 
 
@@ -171,4 +171,4 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
 }
-drawChart()
+// drawChart()
