@@ -171,3 +171,4 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
 }
+drawChart()
