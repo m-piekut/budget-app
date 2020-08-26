@@ -119,7 +119,7 @@ function sumAll() {
     CategorySpendCost(allSpendClothes, allSpendClothesAll);
     CategorySpendCost(allSpendOthers, allSpendOthersAll);
 }
-
+sumAll()
 //usuwanie wydatku
 
 
