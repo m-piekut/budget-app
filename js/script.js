@@ -122,7 +122,7 @@ function sumAll() {
 
 //usuwanie wydatku
 
-
+sumAll()
 
 window.addEventListener('click', (e) => {
     if (e.target.closest('button').classList.contains('delete')) {
