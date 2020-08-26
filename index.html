@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator budżetu domowego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/fe2234a45c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="all-spends categories__card">
+
+            <h3>Wszystkie wydatki</h3>
+            
+            <ul>
+                <li class="all-rent">Czynsz, kredyt, rachunki <a href="#rent-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-food">Jedzenie <a href="#food-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-health">Zdrowie, chemia, higiena <a href="#health-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-transport">Raliwo, bliety, transport <a href="#transport-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-relax">Relaks, hobby, kino <a href="#relax-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-clothes">Ubrania <a href="#clothes-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-others">Inne <a href="#others-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+            </ul>
+            <div id="donutchart" style="width: 100%;height: 100%;"></div>
+        </div>
+        <div class="categories">
+            <div class="categories__card categories__card--popup">
+                <h3>Dodaj wydatek </h3>
+                <label for="new-spend">Nazwa wydatku:</label>
+                <input type="text" name="new-spend" id="new-spend" placeholder="Wprowadz wydatek">
+                <label for="new-spend-cost">Kwota wydatku:</label>
+                <input type="number" name="new-spend-cost" id="new-spend-cost" placeholder="Wprowadź kwotę">
+                <label for="new-spend-category">Rodzaj wydatku:</label>
+                <select name="new-spend-category" id="new-spend-category">
+                    <option value="none" selected disabled>---</option>
+                    <option value="rent">Czynsz, kredyt...</option>
+                    <option value="food">Jedzenie</option>
+                    <option value="health">Zdrowie, chemia, higiena</option>
+                    <option value="transport">Raliwo, bliety, transport</option>
+                    <option value="relax">Relaks, hobby, kino</option>
+                    <option value="clothes">Ubrania</option>
+                    <option value="others">Inne</option>
+                </select>
+                <div class="btns">
+                    <button class="popup-btn popup-btn--add">Dodaj</button>
+                    <button class="popup-btn popup-btn--cancel">Anuluj</i></button>
+                </div>
+            </div>
+            <div class="categories__card categories__card--rent" id="rent-category">
+                <h3>Czynsz, kredyt, rachunki</h3>
+                <ul>
+                    <li>
+                        <div class="spend">item 1</div>
+                        <div class="spend-cost spend-cost--rent">22zł</div>
+                        <button class="delete"><i class="far fa-trash-alt"></i></button>
+                    </li>
+                    <li>
+                        <div class="spend">item 1</div>
+                        <div class="spend-cost spend-cost--rent">22zł</div>
+                    </li>
+                    <li>
+                        <div class="spend">item 1</div>
+                        <div class="spend-cost spend-cost--rent">22zł</div>
+                    </li>
+                    <li>
+                        <div class="spend">item 1</div>
+                        <div class="spend-cost spend-cost--rent">22zł</div>
+                    </li>
+                </ul>
+                <p class="all all--rent">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--food" id="food-category">
+                <h3>Jedzenie</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend">2132</div>
+                        <div class="spend-cost spend-cost--food"></div>
+                    </li>
+                    <li>
+                        <div class="spend">123</div>
+                        <div class="spend-cost spend-cost--food"></div>
+                    </li>
+                    <li>
+                        <div class="spend">123</div>
+                        <div class="spend-cost spend-cost--food"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost spend-cost--food"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost spend-cost--food"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--food">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--health" id="health-category">
+                <h3>Zdrowie, chemia, higiena</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost spend-cost--health"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--health">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--transport" id="tansport-category">
+                <h3>Raliwo, bliety, transport</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--transport">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--relax" id="relax-category">
+                <h3>Relaks, hobby, kino</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--relax">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--clothes" id="clothes-category">
+                <h3>Ubrania</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--clothes">0 zł</p>
+            </div>
+            <div class="categories__card categories__card--others" id="others-category">
+                <h3>Inne</h3>
+                <ul>
+                    <!-- <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li>
+                    <li>
+                        <div class="spend"></div>
+                        <div class="spend-cost"></div>
+                    </li> -->
+                </ul>
+                <p class="all all--others">0 zł</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    
+    <script src="/js/script.js" ></script>
+</body>
+</html>

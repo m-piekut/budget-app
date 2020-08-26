@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: neon;
+  src: url("/fonts/Library 3 am.otf");
+}
+
+body {
+  background-color: #252D2C;
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.all-spends ul li {
+  margin: 10px auto;
+}
+
+.all-spends {
+  position: relative;
+  width: 95%;
+  background-color: #6a6b80;
+}
+
+.all-spends li::before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  content: '';
+}
+
+.all-spends li a {
+  padding: 5px 10px;
+}
+
+.all-spends .all-rent, .all-spends .all-rent a {
+  color: #F7CB15;
+}
+
+.all-spends .all-food, .all-spends .all-food a {
+  color: #72B01D;
+}
+
+.all-spends .all-health, .all-spends .all-health a {
+  color: #731DD8;
+}
+
+.all-spends .all-transport, .all-spends .all-transport a {
+  color: #F75B15;
+}
+
+.all-spends .all-relax, .all-spends .all-relax a {
+  color: #F715F7;
+}
+
+.all-spends .all-clothes, .all-spends .all-clothes a {
+  color: #15D8F7;
+}
+
+.all-spends .all-others, .all-spends .all-others a {
+  color: #d2f9ff;
+}
+
+.all-spends .all-rent::before {
+  box-shadow: 0 0 5px 1px white;
+  background-color: #F7CB15;
+}
+
+.all-spends .all-food::before {
+  background-color: #72B01D;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.all-spends .all-health::before {
+  background-color: #731DD8;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.all-spends .all-transport::before {
+  background-color: #F75B15;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.all-spends .all-relax::before {
+  background-color: #F715F7;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.all-spends .all-clothes::before {
+  background-color: #15D8F7;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.all-spends .all-others::before {
+  background-color: #d2f9ff;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.categories__card {
+  text-align: center;
+  max-height: 95vh;
+  width: 80%;
+  max-width: 400px;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: 0 0 10px 2px white;
+}
+
+.categories__card h3,
+.categories__card .all {
+  font-family: neon;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.categories__card li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  padding: 2px 5px;
+  color: #e1fbff;
+  background-color: none;
+  font-style: italic;
+  list-style: none;
+}
+
+.categories__card li .spend {
+  width: 70%;
+  text-align: left;
+}
+
+.categories__card li button {
+  background-color: transparent;
+  border: none;
+}
+
+.categories__card li button .fa-trash-alt {
+  color: white;
+  text-shadow: 1px 0px 3px #f73715, 1px 0px 4px #f73715, 4px 0px 2px #f73715, 2px 0vw 0vw #f74d2f, 3px 0vw 0vw #f74d2f, 3px 0vw 0vw #f74d2f, 2px 0vw 1px #f5674e, 2px 0vw 1px #f5674e, 4px 0vw 1px #f5674e, 1px 0vw 2px #f37d68, 2px 0vw 5px #f37d68, 4px 0vw 5px #f37d68;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.categories__card li::before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  content: '';
+}
+
+.categories__card--popup {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #3569f8;
+}
+
+.categories__card--popup h3 {
+  color: white;
+  text-shadow: 1px 0px 3px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7, 2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0, 1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
+}
+
+.categories__card--popup input,
+.categories__card--popup select {
+  width: 70%;
+  padding: 2px 4px;
+  margin: 5px auto;
+  border: #1551f7 1px solid;
+}
+
+.categories__card--popup .popup-btn {
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: #e6ebfc 0 0 10px;
+  font-size: 12px;
+  color: white;
+  font-family: neon;
+  font-weight: lighter;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.categories__card--popup .popup-btn--add {
+  border: 1px solid #a2e742;
+  text-shadow: 1px 0px 3px #a2e742, 1px 0px 4px #a2e742, 4px 0px 2px #a2e742, 2px 0vw 0vw #93f80f, 3px 0vw 0vw #93f80f, 3px 0vw 0vw #93f80f, 2px 0vw 1px #a7f146, 2px 0vw 1px #a7f146, 4px 0vw 1px #a7f146, 1px 0vw 2px #b8ec73, 2px 0vw 5px #b8ec73, 4px 0vw 5px #b8ec73;
+}
+
+.categories__card--popup .popup-btn--cancel {
+  border: 1px solid #ca3b3b;
+  text-shadow: 1px 0px 3px #ca3b3b, 1px 0px 4px #ca3b3b, 4px 0px 2px #ca3b3b, 2px 0vw 0vw #d45050, 3px 0vw 0vw #d45050, 3px 0vw 0vw #d45050, 2px 0vw 1px #df6060, 2px 0vw 1px #df6060, 4px 0vw 1px #df6060, 1px 0vw 2px #e4a9a9, 2px 0vw 5px #f3b2b2, 4px 0vw 5px #f08f8f;
+}
+
+.categories__card--rent {
+  border: 2px solid #F7CB15;
+}
+
+.categories__card--rent h3,
+.categories__card--rent .all {
+  color: white;
+  text-shadow: 1px 0px 3px #F7CB15, 1px 0px 4px #F7CB15, 0.4px 0px 2px #F7CB15, 2px 0vw 0vw #f8ca0f, 3px 0vw 0vw #f8ca0f, 3px 0vw 0vw #f8ca0f, 2px 0vw 1px #e9f80f, 2px 0vw 1px #e9f80f, 4px 0vw 1px #e9f80f, 1px 0vw 2px #edf84b, 2px 0vw 5px #edf84b, 4px 0vw 5px #edf84b;
+}
+
+.categories__card--food {
+  border: 2px solid #72B01D;
+}
+
+.categories__card--food h3,
+.categories__card--food .all {
+  color: white;
+  text-shadow: 1px 0px 3px #72B01D, 1px 0px 4px #72B01D, 0.4px 0px 2px #72B01D, 2px 0vw 0vw #72B01D, 3px 0vw 0vw #72B01D, 3px 0vw 0vw #72B01D, 2px 0vw 1px #89d41e, 2px 0vw 1px #89d41e, 4px 0vw 1px #89d41e, 1px 0vw 2px #a3f72f, 2px 0vw 5px #a3f72f, 4px 0vw 5px #a3f72f;
+}
+
+.categories__card--clothes {
+  border: 2px solid #15D8F7;
+}
+
+.categories__card--clothes h3,
+.categories__card--clothes .all {
+  color: white;
+  text-shadow: 1px 0px 3px #15D8F7, 1px 0px 4px #15D8F7, 0.4px 0px 2px #15D8F7, 2px 0vw 0vw #15D8F7, 3px 0vw 0vw #15D8F7, 3px 0vw 0vw #15D8F7, 2px 0vw 1px #42e0f8, 2px 0vw 1px #42e0f8, 4px 0vw 1px #42e0f8, 1px 0vw 2px #7fe7f7, 2px 0vw 5px #7fe7f7, 4px 0vw 5px #7fe7f7;
+}
+
+.categories__card--transport {
+  border: 2px solid #F75B15;
+}
+
+.categories__card--transport h3,
+.categories__card--transport .all {
+  color: white;
+  text-shadow: 1px 0px 3px #F75B15, 1px 0px 4px #F75B15, 0.4px 0px 2px #F75B15, 2px 0vw 0vw #F75B15, 3px 0vw 0vw #F75B15, 3px 0vw 0vw #F75B15, 2px 0vw 1px #f36b2c, 2px 0vw 1px #f36b2c, 4px 0vw 1px #f36b2c, 1px 0vw 2px #f57e47, 2px 0vw 5px #f57e47, 4px 0vw 5px #f57e47;
+}
+
+.categories__card--relax {
+  border: 2px solid #F715F7;
+}
+
+.categories__card--relax h3,
+.categories__card--relax .all {
+  color: white;
+  text-shadow: 1px 0px 3px #F715F7, 1px 0px 4px #F715F7, 0.4px 0px 2px #F715F7, 2px 0vw 0vw #F715F7, 3px 0vw 0vw #F715F7, 3px 0vw 0vw #F715F7, 2px 0vw 1px #f539f5, 2px 0vw 1px #f539f5, 4px 0vw 1px #f539f5, 1px 0vw 2px #f768f7, 2px 0vw 5px #f768f7, 4px 0vw 5px #f768f7;
+}
+
+.categories__card--health {
+  border: 2px solid #731DD8;
+}
+
+.categories__card--health h3,
+.categories__card--health .all {
+  color: white;
+  text-shadow: 1px 0px 3px #731DD8, 1px 0px 4px #731DD8, 0.4px 0px 2px #731DD8, 2px 0vw 0vw #731DD8, 3px 0vw 0vw #731DD8, 3px 0vw 0vw #731DD8, 2px 0vw 1px #852aec, 2px 0vw 1px #852aec, 4px 0vw 1px #852aec, 1px 0vw 2px #9041eb, 2px 0vw 5px #9041eb, 4px 0vw 5px #9041eb;
+}
+
+.categories__card--others {
+  border: 2px solid #d2f9ff;
+}
+
+.categories__card--others h3,
+.categories__card--others .all {
+  color: white;
+  text-shadow: 1px 0px 3px #d2f9ff, 1px 0px 4px #d2f9ff, 0.4px 0px 2px #d2f9ff, 2px 0vw 0vw #d2f9ff, 3px 0vw 0vw #d2f9ff, 3px 0vw 0vw #d2f9ff, 2px 0vw 1px #e1fbff, 2px 0vw 1px #e1fbff, 4px 0vw 1px #e1fbff, 1px 0vw 2px #e3f1f3, 2px 0vw 5px #e3f1f3, 4px 0vw 5px #e3f1f3;
+}
+
+.categories__card--rent li::before {
+  box-shadow: 0 0 5px 1px white;
+  background-color: #F7CB15;
+}
+
+.categories__card--food li::before {
+  background-color: #72B01D;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories__card--health li::before {
+  background-color: #731DD8;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories__card--transport li::before {
+  background-color: #F75B15;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories__card--relax li::before {
+  background-color: #F715F7;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories__card--clothes li::before {
+  background-color: #15D8F7;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.categories__card--others li::before {
+  background-color: #d2f9ff;
+  box-shadow: 0 0 5px 1px white;
+}
+/*# sourceMappingURL=style.css.map */
