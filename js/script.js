@@ -79,7 +79,7 @@ let allSpendRent = document.getElementsByClassName('spend-cost--rent')
 let allSpendFood = document.getElementsByClassName('spend-cost--food')
 let allSpendHealth = document.getElementsByClassName('spend-cost--health')
 let allSpendTransport = document.getElementsByClassName('spend-cost--transport')
-let allSpendRelax = document.getElementsByClassName('spend-cost--realx')
+let allSpendRelax = document.getElementsByClassName('spend-cost--relax')
 let allSpendClothes = document.getElementsByClassName('spend-cost--clothes')
 let allSpendOthers = document.getElementsByClassName('spend-cost--others')
 
@@ -108,6 +108,7 @@ const CategorySpendCost = (x, y) => {
         y.innerText = `${sum} zł`
         
     }
+    console.log(sum)
 }
 //funkcja do zliczania wszystkich kategorii
 function sumAll() {

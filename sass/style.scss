@@ -24,6 +24,7 @@ $colors: (cRent: #F7CB15,
 body {
     background-color: #252D2C;
     font-family: 'Raleway', sans-serif;
+    background-image: url(/obrazy/brics.jpg);
 }
 
 .wrapper {
@@ -136,6 +137,7 @@ body {
         padding: 10px 20px;
         margin: 10px;
         box-shadow: 0 0 10px 2px white;
+        background-color: rgba(0, 0, 0, .7);
 
         h3,
         .all {

@@ -33,7 +33,7 @@
 .categories__card .all {
   position: sticky;
   bottom: 0;
-  background-color: #252D2C;
+  background-image: url(../obrazy/brics2.jpg);
   width: 100%;
   padding: 10px;
 }
@@ -44,5 +44,10 @@
 
 fa-arrow-circle-down {
   display: none;
+}
+
+.all-spends ul li {
+  font-size: 16px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=large.css.map */
