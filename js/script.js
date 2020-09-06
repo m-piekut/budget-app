@@ -106,7 +106,7 @@ const CategorySpendCost = (x, y) => {
         const element = spendArr[index];
         sum += element
         y.innerText = `${sum} zł`
-
+        
     }
 }
 //funkcja do zliczania wszystkich kategorii
@@ -156,9 +156,7 @@ function drawChart() {
     ]);
 
     var options = {
-        'width': '100%',
         chartArea:{left:0,top:0,width:'100%',height:'100%'},
-        pieHole: 0.4,
         'is3D': true,
         'backgroundColor': 'none',
         'legend.position': 'none',

@@ -126,9 +126,8 @@ body {
     align-items: center;
     width: 95%;
 
-    &__card {
+    &__card{
         text-align: center;
-        max-height: 95vh;
         width: 80%;
         max-width: 400px;
         border: 4px solid transparent;
@@ -143,6 +142,7 @@ body {
             font-family: neon;
             text-transform: uppercase;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         li {
@@ -159,6 +159,7 @@ body {
 
             .spend {
                 width: 70%;
+                overflow: auto;
                 text-align: left;
             }
 
@@ -249,7 +250,7 @@ body {
         }
 
 
-
+        
 
         &--rent {
             border: 2px solid map-get($colors, cRent);
@@ -389,4 +390,10 @@ body {
 
     }
 
+}
+
+.chart-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,47 @@
+
+
+.wrapper{
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100vh;
+
+    .all-spends{
+        height: 70%;
+        overflow: hidden;
+    }
+}
+
+.categories{
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: 70%;
+
+    &__card{
+    height: 45%;
+    width: 23%;
+    overflow: auto;
+    margin-top: 10px;
+    li{
+        margin-bottom: 10px;
+        a{
+            display: none;
+        }
+    }
+
+    .all{
+            position: sticky;
+            bottom: 0;
+            background-color: #252D2C;
+            width: 100%;
+            padding: 10px;
+        }
+
+}
+}
+.chart-wrap{
+    margin-top: 20%;
+}
+
+fa-arrow-circle-down{
+    display: none;
+}
