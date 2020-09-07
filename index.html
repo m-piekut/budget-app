@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator budżetu domowego</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" media="screen and (min-width:1600px)" href="./css/large.css">
+    <link rel="stylesheet" media="screen and (min-width:1350px)" href="./css/large.css">
     <script src="https://kit.fontawesome.com/fe2234a45c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <h1>kalkulator wydatków</h1>
     <div class="wrapper">
         <div class="all-spends categories__card">
 
             <h3>Wszystkie wydatki</h3>
-            
+
             <ul>
-                <li class="all-rent">Czynsz, kredyt, rachunki <a href="#rent-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-rent">Czynsz, kredyt, rachunki <a href="#rent-category"><i
+                            class="fas fa-arrow-circle-down"></i></a></li>
                 <li class="all-food">Jedzenie <a href="#food-category"><i class="fas fa-arrow-circle-down"></i></a></li>
-                <li class="all-health">Zdrowie, chemia, higiena <a href="#health-category"><i class="fas fa-arrow-circle-down"></i></a></li>
-                <li class="all-transport">Raliwo, bliety, transport <a href="#transport-category"><i class="fas fa-arrow-circle-down"></i></a></li>
-                <li class="all-relax">Relaks, hobby, kino <a href="#relax-category"><i class="fas fa-arrow-circle-down"></i></a></li>
-                <li class="all-clothes">Ubrania <a href="#clothes-category"><i class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-health">Zdrowie, chemia, higiena <a href="#health-category"><i
+                            class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-transport">Raliwo, bliety, transport <a href="#transport-category"><i
+                            class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-relax">Relaks, hobby, kino <a href="#relax-category"><i
+                            class="fas fa-arrow-circle-down"></i></a></li>
+                <li class="all-clothes">Ubrania <a href="#clothes-category"><i class="fas fa-arrow-circle-down"></i></a>
+                </li>
                 <li class="all-others">Inne <a href="#others-category"><i class="fas fa-arrow-circle-down"></i></a></li>
             </ul>
             <div class="chart-wrap">
-            <div id="donutchart"></div>
-        </div>
+                <div id="donutchart"></div>
+            </div>
+            <p class="all all--all"> Razem: 0 zł</p>
         </div>
         <div class="categories">
             <div class="categories__card categories__card--popup">
@@ -49,7 +58,7 @@
                 </select>
                 <div class="btns">
                     <button class="popup-btn popup-btn--add">Dodaj</button>
-                    <button class="popup-btn popup-btn--cancel">Anuluj</i></button>
+                    <!-- <button class="popup-btn popup-btn--cancel">Anuluj</i></button> -->
                 </div>
             </div>
             <div class="categories__card categories__card--rent" id="rent-category">
@@ -75,29 +84,29 @@
                         <div class="spend-cost spend-cost--rent">22zł</div>
                         <button class="delete"><i class="far fa-trash-alt"></i></button>
                     </li>
-                    
-                    
+
+
                 </ul>
                 <p class="all all--rent">0 zł</p>
             </div>
             <div class="categories__card categories__card--food" id="food-category">
                 <h3>Jedzenie</h3>
                 <ul>
-                    
+
                 </ul>
                 <p class="all all--food">0 zł</p>
             </div>
             <div class="categories__card categories__card--health" id="health-category">
                 <h3>Zdrowie, chemia, higiena</h3>
                 <ul>
-                    
+
                 </ul>
                 <p class="all all--health">0 zł</p>
             </div>
             <div class="categories__card categories__card--transport" id="tansport-category">
                 <h3>Raliwo, bliety, transport</h3>
                 <ul>
-                    
+
                 </ul>
                 <p class="all all--transport">0 zł</p>
             </div>
@@ -110,14 +119,14 @@
             <div class="categories__card categories__card--clothes" id="clothes-category">
                 <h3>Ubrania</h3>
                 <ul>
-                    
+
                 </ul>
                 <p class="all all--clothes">0 zł</p>
             </div>
             <div class="categories__card categories__card--others" id="others-category">
                 <h3>Inne</h3>
                 <ul>
-                    
+
                 </ul>
                 <p class="all all--others">0 zł</p>
             </div>
@@ -133,7 +142,8 @@
 
 
 
-    
-    <script src="/js/script.js" ></script>
+
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

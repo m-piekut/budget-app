@@ -91,7 +91,7 @@ const allSpendTransportAll = document.querySelector('.all--transport')
 const allSpendRelaxAll = document.querySelector('.all--relax')
 const allSpendClothesAll = document.querySelector('.all--clothes')
 const allSpendOthersAll = document.querySelector('.all--others')
-
+const allSpendAllAll = document.querySelector('.all--all')
 
 //sumowanie wydatków w kategori
 const CategorySpendCost = (x, y) => {
@@ -130,15 +130,27 @@ window.addEventListener('click', (e) => {
         e.target.closest('li').remove()
         sumAll()
         drawChart()
+        allspends()
     }
 })
 
 
 addBtn.addEventListener('click', ()=>{
     checkInputs()
+    allspends()
 })
 
-console.log(parseFloat(allSpendClothesAll.innerText))
+const allspends = ()=>{
+    let allSpendSum = [parseFloat(allSpendRentAll.innerText), parseFloat(allSpendFoodAll.innerText), parseFloat(allSpendHealthAll.innerText), parseFloat(allSpendTransportAll.innerText), parseFloat(allSpendRelaxAll.innerText), parseFloat(allSpendClothesAll.innerText), parseFloat(allSpendOthersAll.innerText)].reduce(function(prev, curr) {
+        return prev + curr;
+    });;
+
+    allSpendAllAll.innerText = `Razem: ${allSpendSum} zł`
+}
+allspends()
+
+
+
 google.charts.load("current", {
     packages: ["corechart"]
 });
@@ -169,5 +181,8 @@ function drawChart() {
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
+
+    
 }
 drawChart()
+

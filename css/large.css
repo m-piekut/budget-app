@@ -1,7 +1,15 @@
+h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  text-shadow: 10px 4px 6px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7, 2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0, 1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
+}
+
 .wrapper {
   flex-direction: row-reverse;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 95vh;
+  margin-top: -53px;
 }
 
 .wrapper .all-spends {
@@ -49,5 +57,6 @@ fa-arrow-circle-down {
 .all-spends ul li {
   font-size: 16px;
   font-weight: bold;
+  margin: 16px;
 }
 /*# sourceMappingURL=large.css.map */
