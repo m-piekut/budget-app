@@ -24,6 +24,23 @@ $colors: (cRent: #F7CB15,
 body {
     background-color: #252D2C;
     font-family: 'Raleway', sans-serif;
+    background-image: url(/obrazy/brics.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: neon;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+    text-shadow:
+        1px 0px 3px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7,
+        2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7,
+        2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0,
+        1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
 }
 
 .wrapper {
@@ -34,16 +51,26 @@ body {
     align-items: center;
     margin: 0 auto;
 }
-.all-spends ul li {
-    margin: 10px auto;
-}
+
 .all-spends {
     position: relative;
     width: 95%;
     background-color: rgb(106, 107, 128);
-    
-    
-    
+    border: 1px solid #3569f8;
+
+    h3, .all {
+        color: white;
+        text-shadow:
+            1px 0px 3px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7,
+            2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7,
+            2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0,
+            1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
+    }
+
+    ul li {
+        margin: 10px auto;
+    }
+
     li::before {
         position: absolute;
         bottom: -2px;
@@ -52,34 +79,43 @@ body {
         width: 100%;
         content: '';
     }
-    li a{
+
+    li a {
         padding: 5px 10px;
     }
-    .all-rent, .all-rent a {
+
+    .all-rent,
+    .all-rent a {
         color: map-get($colors, cRent)
     }
 
-    .all-food, .all-food a{
+    .all-food,
+    .all-food a {
         color: map-get($colors, cFood)
     }
 
-    .all-health, .all-health a{
+    .all-health,
+    .all-health a {
         color: map-get($colors, cHealth)
     }
 
-    .all-transport, .all-transport a{
+    .all-transport,
+    .all-transport a {
         color: map-get($colors, cTransport)
     }
 
-    .all-relax, .all-relax a {
+    .all-relax,
+    .all-relax a {
         color: map-get($colors, cRelax)
     }
 
-    .all-clothes, .all-clothes a{
+    .all-clothes,
+    .all-clothes a {
         color: map-get($colors, cClothes)
     }
 
-    .all-others , .all-others a{
+    .all-others,
+    .all-others a {
         color: map-get($colors, cOthers)
     }
 
@@ -128,21 +164,21 @@ body {
 
     &__card {
         text-align: center;
-        max-height: 95vh;
         width: 80%;
         max-width: 400px;
-        border: 4px solid transparent;
         border-radius: 15px;
         margin: 0 auto;
         padding: 10px 20px;
         margin: 10px;
         box-shadow: 0 0 10px 2px white;
+        background-color: rgba(0, 0, 0, .7);
 
         h3,
         .all {
             font-family: neon;
             text-transform: uppercase;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         li {
@@ -159,6 +195,7 @@ body {
 
             .spend {
                 width: 70%;
+                overflow: auto;
                 text-align: left;
             }
 
@@ -207,7 +244,7 @@ body {
 
             input,
             select {
-                width: 70%;
+                width: 90%;
                 padding: 2px 4px;
                 margin: 5px auto;
                 border: #1551f7 1px solid
@@ -219,7 +256,7 @@ body {
                 border: none;
                 border-radius: 20px;
                 padding: 10px 20px;
-                margin: 10px;
+                margin: 10px auto;
                 box-shadow: #e6ebfc 0 0 10px;
                 font-size: 12px;
                 color: white;
@@ -389,4 +426,10 @@ body {
 
     }
 
+}
+
+.chart-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

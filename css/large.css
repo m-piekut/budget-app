@@ -1,0 +1,62 @@
+h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  text-shadow: 10px 4px 6px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7, 2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0, 1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
+}
+
+.wrapper {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  margin-top: -53px;
+}
+
+.wrapper .all-spends {
+  height: 70%;
+  overflow: hidden;
+}
+
+.categories {
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+.categories__card {
+  height: 45%;
+  width: 23%;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.categories__card li {
+  margin-bottom: 10px;
+}
+
+.categories__card li a {
+  display: none;
+}
+
+.categories__card .all {
+  position: sticky;
+  bottom: 0;
+  background-image: url(../obrazy/brics2.jpg);
+  width: 100%;
+  padding: 10px;
+}
+
+.chart-wrap {
+  margin-top: 20%;
+}
+
+fa-arrow-circle-down {
+  display: none;
+}
+
+.all-spends ul li {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 16px;
+}
+/*# sourceMappingURL=large.css.map */

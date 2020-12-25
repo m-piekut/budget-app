@@ -13,6 +13,19 @@
 body {
   background-color: #252D2C;
   font-family: 'Raleway', sans-serif;
+  background-image: url(/obrazy/brics.jpg);
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: neon;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: white;
+  text-shadow: 1px 0px 3px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7, 2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0, 1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
 }
 
 .wrapper {
@@ -24,14 +37,20 @@ body {
   margin: 0 auto;
 }
 
-.all-spends ul li {
-  margin: 10px auto;
-}
-
 .all-spends {
   position: relative;
   width: 95%;
   background-color: #6a6b80;
+  border: 1px solid #3569f8;
+}
+
+.all-spends h3, .all-spends .all {
+  color: white;
+  text-shadow: 1px 0px 3px #1551f7, 1px 0px 4px #1551f7, 4px 0px 2px #1551f7, 2px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 3px 0vw 0vw #2f64f7, 2px 0vw 1px #4b77f0, 2px 0vw 1px #4b77f0, 4px 0vw 1px #4b77f0, 1px 0vw 2px #597bda, 2px 0vw 5px #597bda, 4px 0vw 5px #597bda;
+}
+
+.all-spends ul li {
+  margin: 10px auto;
 }
 
 .all-spends li::before {
@@ -47,31 +66,38 @@ body {
   padding: 5px 10px;
 }
 
-.all-spends .all-rent, .all-spends .all-rent a {
+.all-spends .all-rent,
+.all-spends .all-rent a {
   color: #F7CB15;
 }
 
-.all-spends .all-food, .all-spends .all-food a {
+.all-spends .all-food,
+.all-spends .all-food a {
   color: #72B01D;
 }
 
-.all-spends .all-health, .all-spends .all-health a {
+.all-spends .all-health,
+.all-spends .all-health a {
   color: #731DD8;
 }
 
-.all-spends .all-transport, .all-spends .all-transport a {
+.all-spends .all-transport,
+.all-spends .all-transport a {
   color: #F75B15;
 }
 
-.all-spends .all-relax, .all-spends .all-relax a {
+.all-spends .all-relax,
+.all-spends .all-relax a {
   color: #F715F7;
 }
 
-.all-spends .all-clothes, .all-spends .all-clothes a {
+.all-spends .all-clothes,
+.all-spends .all-clothes a {
   color: #15D8F7;
 }
 
-.all-spends .all-others, .all-spends .all-others a {
+.all-spends .all-others,
+.all-spends .all-others a {
   color: #d2f9ff;
 }
 
@@ -119,15 +145,14 @@ body {
 
 .categories__card {
   text-align: center;
-  max-height: 95vh;
   width: 80%;
   max-width: 400px;
-  border: 4px solid transparent;
   border-radius: 15px;
   margin: 0 auto;
   padding: 10px 20px;
   margin: 10px;
   box-shadow: 0 0 10px 2px white;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .categories__card h3,
@@ -135,6 +160,7 @@ body {
   font-family: neon;
   text-transform: uppercase;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .categories__card li {
@@ -152,6 +178,7 @@ body {
 
 .categories__card li .spend {
   width: 70%;
+  overflow: auto;
   text-align: left;
 }
 
@@ -191,7 +218,7 @@ body {
 
 .categories__card--popup input,
 .categories__card--popup select {
-  width: 70%;
+  width: 90%;
   padding: 2px 4px;
   margin: 5px auto;
   border: #1551f7 1px solid;
@@ -203,7 +230,7 @@ body {
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px auto;
   box-shadow: #e6ebfc 0 0 10px;
   font-size: 12px;
   color: white;
@@ -326,5 +353,11 @@ body {
 .categories__card--others li::before {
   background-color: #d2f9ff;
   box-shadow: 0 0 5px 1px white;
+}
+
+.chart-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

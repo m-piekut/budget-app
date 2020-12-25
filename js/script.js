@@ -79,7 +79,7 @@ let allSpendRent = document.getElementsByClassName('spend-cost--rent')
 let allSpendFood = document.getElementsByClassName('spend-cost--food')
 let allSpendHealth = document.getElementsByClassName('spend-cost--health')
 let allSpendTransport = document.getElementsByClassName('spend-cost--transport')
-let allSpendRelax = document.getElementsByClassName('spend-cost--realx')
+let allSpendRelax = document.getElementsByClassName('spend-cost--relax')
 let allSpendClothes = document.getElementsByClassName('spend-cost--clothes')
 let allSpendOthers = document.getElementsByClassName('spend-cost--others')
 
@@ -91,7 +91,7 @@ const allSpendTransportAll = document.querySelector('.all--transport')
 const allSpendRelaxAll = document.querySelector('.all--relax')
 const allSpendClothesAll = document.querySelector('.all--clothes')
 const allSpendOthersAll = document.querySelector('.all--others')
-
+const allSpendAllAll = document.querySelector('.all--all')
 
 //sumowanie wydatków w kategori
 const CategorySpendCost = (x, y) => {
@@ -106,8 +106,9 @@ const CategorySpendCost = (x, y) => {
         const element = spendArr[index];
         sum += element
         y.innerText = `${sum} zł`
-
+        
     }
+    console.log(sum)
 }
 //funkcja do zliczania wszystkich kategorii
 function sumAll() {
@@ -119,25 +120,37 @@ function sumAll() {
     CategorySpendCost(allSpendClothes, allSpendClothesAll);
     CategorySpendCost(allSpendOthers, allSpendOthersAll);
 }
-
+sumAll()
 //usuwanie wydatku
 
-sumAll()
+
 
 window.addEventListener('click', (e) => {
     if (e.target.closest('button').classList.contains('delete')) {
         e.target.closest('li').remove()
         sumAll()
         drawChart()
+        allspends()
     }
 })
 
 
 addBtn.addEventListener('click', ()=>{
     checkInputs()
+    allspends()
 })
 
-console.log(parseFloat(allSpendClothesAll.innerText))
+const allspends = ()=>{
+    let allSpendSum = [parseFloat(allSpendRentAll.innerText), parseFloat(allSpendFoodAll.innerText), parseFloat(allSpendHealthAll.innerText), parseFloat(allSpendTransportAll.innerText), parseFloat(allSpendRelaxAll.innerText), parseFloat(allSpendClothesAll.innerText), parseFloat(allSpendOthersAll.innerText)].reduce(function(prev, curr) {
+        return prev + curr;
+    });;
+
+    allSpendAllAll.innerText = `Razem: ${allSpendSum} zł`
+}
+allspends()
+
+
+
 google.charts.load("current", {
     packages: ["corechart"]
 });
@@ -156,9 +169,7 @@ function drawChart() {
     ]);
 
     var options = {
-        'width': '100%',
         chartArea:{left:0,top:0,width:'100%',height:'100%'},
-        pieHole: 0.4,
         'is3D': true,
         'backgroundColor': 'none',
         'legend.position': 'none',
@@ -170,5 +181,8 @@ function drawChart() {
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
+
+    
 }
 drawChart()
+
